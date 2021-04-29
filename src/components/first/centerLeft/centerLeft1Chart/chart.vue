@@ -3,7 +3,7 @@
     <Echart
       :options="options"
       id="centreLeft1Chart"
-      height="2.75rem"
+      height="3.75rem"
       width="3.25rem"
     ></Echart>
   </div>
@@ -60,7 +60,7 @@ export default {
           },
           series: [
             {
-              name: "通过率统计",
+              name: "类型统计",
               type: "pie",
               radius: [10, 60],
               roseType: "area",
