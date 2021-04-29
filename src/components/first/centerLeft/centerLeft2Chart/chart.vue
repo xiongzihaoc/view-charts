@@ -11,7 +11,7 @@
 </template>
 
 <script>
-import Echart from '@/common/echart';
+import Echart from "@/common/echart";
 export default {
   data() {
     return {
@@ -32,43 +32,55 @@ export default {
       handler(newData) {
         // 设置点的位置(经纬度)
         const geoCoordMap = {
-          厦门市: [118.11022, 24.490474, 20],
-          福州市: [119.206239, 26.275302, 20],
-          泉州市: [118.589421, 24.908853, 20],
-          漳州市: [117.561801, 24.510897, 20],
-          龙岩市: [116.82978, 25.391603, 20],
-          莆田市: [119.007558, 25.591011, 20],
-          三明市: [117.435001, 26.465444, 20],
-          南平市: [118.178459, 27.535627, 20],
-          宁德市: [119.527082, 27.15924, 20],
+          杭州市: [120.153576, 30.287459],
+          宁波市: [121.549792, 29.868388],
+          温州市: [120.672111, 28.000575],
+          嘉兴市: [120.750865, 30.762653],
+          湖州市: [120.102398, 30.867198],
+          绍兴市: [120.582112, 29.997117],
+          金华市: [119.649506, 29.089524],
+          衢州市: [118.87263, 28.941708],
+          舟山市: [122.106863, 30.016028],
+          台州市: [121.428599, 28.661378],
+          丽水市: [119.921786, 28.451993],
         };
         let seriesData = [
           {
-            name: '厦门市',
+            name: "杭州市",
           },
           {
-            name: '福州市',
+            name: "宁波市",
           },
           {
-            name: '泉州市',
+            name: "温州市",
           },
           {
-            name: '漳州市',
+            name: "嘉兴市",
           },
           {
-            name: '龙岩市',
+            name: "湖州市",
           },
           {
-            name: '莆田市',
+            name: "绍兴市",
           },
           {
-            name: '三明市',
+            name: "金华市",
           },
           {
-            name: '南平市',
+            name: "衢州市",
           },
           {
-            name: '宁德市',
+            name: "舟山市",
+          },
+
+          {
+            name: "台州市",
+          },
+          {
+            name: "台州市",
+          },
+          {
+            name: "丽水市",
           },
         ];
         let convertData = function (data) {
@@ -87,12 +99,12 @@ export default {
         this.options = {
           showLegendSymbol: true,
           tooltip: {
-            trigger: 'item',
+            trigger: "item",
             textStyle: {
               fontSize: 14,
               lineHeight: 22,
             },
-            position: point => {
+            position: (point) => {
               // 固定在顶部
               return [point[0] + 50, point[1] - 20];
             },
@@ -110,7 +122,7 @@ export default {
             seriesIndex: 0,
             // 颜色
             inRange: {
-              color: ['rgba(41,166,206, .5)', 'rgba(69,117,245, .9)'],
+              color: ["rgba(41,166,206, .5)", "rgba(69,117,245, .9)"],
             },
           },
           // 底部背景
@@ -118,82 +130,82 @@ export default {
             show: true,
             aspectScale: 0.85, //长宽比
             zoom: 1.2,
-            top: '10%',
-            left: '16%',
-            map: '福建',
+            top: "10%",
+            left: "16%",
+            map: "浙江",
             roam: false,
             itemStyle: {
               normal: {
-                areaColor: 'rgba(0,0,0,0)',
-                shadowColor: 'rgba(7,114,204, .8)',
+                areaColor: "rgba(0,0,0,0)",
+                shadowColor: "rgba(7,114,204, .8)",
                 shadowOffsetX: 5,
                 shadowOffsetY: 5,
               },
               emphasis: {
-                areaColor: '#00aeef',
+                areaColor: "#00aeef",
               },
             },
           },
           series: [
             {
-              name: '相关指数',
-              type: 'map',
+              name: "相关指数",
+              type: "map",
               aspectScale: 0.85, //长宽比
               zoom: 1.2,
-              mapType: '福建', // 自定义扩展图表类型
-              top: '10%',
-              left: '16%',
+              mapType: "浙江", // 自定义扩展图表类型
+              top: "10%",
+              left: "16%",
               itemStyle: {
                 normal: {
-                  color: 'red',
-                  areaColor: 'rgba(19,54,162, .5)',
-                  borderColor: 'rgba(0,242,252,.3)',
+                  color: "red",
+                  areaColor: "rgba(19,54,162, .5)",
+                  borderColor: "rgba(0,242,252,.3)",
                   borderWidth: 1,
                   shadowBlur: 7,
-                  shadowColor: '#00f2fc',
+                  shadowColor: "#00f2fc",
                 },
                 emphasis: {
-                  areaColor: '#4f7fff',
-                  borderColor: 'rgba(0,242,252,.6)',
+                  areaColor: "#4f7fff",
+                  borderColor: "rgba(0,242,252,.6)",
                   borderWidth: 2,
                   shadowBlur: 10,
-                  shadowColor: '#00f2fc',
+                  shadowColor: "#00f2fc",
                 },
               },
               label: {
-                formatter: params => `${params.name}`,
+                formatter: (params) => `${params.name}`,
                 show: true,
-                position: 'insideRight',
+                position: "insideRight",
                 textStyle: {
                   fontSize: 14,
-                  color: '#efefef',
+                  color: "#efefef",
                 },
                 emphasis: {
                   textStyle: {
-                    color: '#fff',
+                    color: "#fff",
                   },
                 },
               },
               data: newData,
             },
             {
-              type: 'effectScatter',
-              coordinateSystem: 'geo',
+              type: "effectScatter",
+              coordinateSystem: "geo",
               symbolSize: 7,
-              effectType: 'ripple',
+              effectType: "ripple",
               legendHoverLink: false,
-              showEffectOn: 'render',
+              showEffectOn: "render",
               rippleEffect: {
                 period: 4,
                 scale: 2.5,
-                brushType: 'stroke',
+                brushType: "stroke",
               },
               zlevel: 1,
               itemStyle: {
                 normal: {
-                  color: '#99FBFE',
+                  color: "#99FBFE",
                   shadowBlur: 5,
-                  shadowColor: '#fff',
+                  shadowColor: "#fff",
                 },
               },
               data: convertData(seriesData),
@@ -222,7 +234,7 @@ export default {
     },
     // 重新随机选中地图区域
     reSelectMapRandomArea() {
-      const length = 9;
+      const length = 11;
       this.$nextTick(() => {
         const map = this.$refs.centreLeft2ChartRef.chart;
         let index = Math.floor(Math.random() * length);
@@ -230,17 +242,17 @@ export default {
           index = Math.floor(Math.random() * length);
         }
         map.dispatchAction({
-          type: 'mapUnSelect',
+          type: "mapUnSelect",
           seriesIndex: 0,
           dataIndex: this.preSelectMapIndex,
         });
         map.dispatchAction({
-          type: 'showTip',
+          type: "showTip",
           seriesIndex: 0,
           dataIndex: index,
         });
         map.dispatchAction({
-          type: 'mapSelect',
+          type: "mapSelect",
           seriesIndex: 0,
           dataIndex: index,
         });
@@ -255,22 +267,22 @@ export default {
           _self.reSelectMapRandomArea();
         }, 0);
         // 移入区域，清除定时器、取消之前选中并选中当前
-        map.on('mouseover', function (params) {
+        map.on("mouseover", function (params) {
           clearInterval(_self.intervalId);
           map.dispatchAction({
-            type: 'mapUnSelect',
+            type: "mapUnSelect",
             seriesIndex: 0,
             dataIndex: _self.preSelectMapIndex,
           });
           map.dispatchAction({
-            type: 'mapSelect',
+            type: "mapSelect",
             seriesIndex: 0,
             dataIndex: params.dataIndex,
           });
           _self.preSelectMapIndex = params.dataIndex;
         });
         // 移出区域重新随机选中地图区域，并开启定时器
-        map.on('globalout', function () {
+        map.on("globalout", function () {
           _self.reSelectMapRandomArea();
           _self.startInterval();
         });

@@ -1,22 +1,22 @@
 <template>
   <div id="center">
-    <div class="up">
+    <!-- <div class="up">
       <div class="bg-color-black item" v-for="item in titleItem" :key="item.title">
         <p class="ml-3 colorBlue fw-b">{{item.title}}</p>
         <div>
           <dv-digital-flop :config="item.number" style="width:1.25rem;height:.625rem;" />
         </div>
       </div>
-    </div>
+    </div> -->
     <div class="down">
       <div class="ranking bg-color-black">
         <span style="color:#5cd9e8">
           <icon name="align-left"></icon>
         </span>
-        <span class="fs-xl text mx-2 mb-1">年度负责人组件达标榜</span>
-        <dv-scroll-ranking-board :config="ranking" style="height:2.75rem" />
+        <span class="fs-xl text mx-2 mb-1">慢病下降率<span style="color:#F56C6C;font-weight:700;"> TOP10</span></span>
+        <dv-scroll-ranking-board :config="ranking" style="height:4.875rem" />
       </div>
-      <div class="percent">
+      <!-- <div class="percent">
         <div class="item bg-color-black">
           <span>今日任务通过率</span>
           <CenterChart :id="rate[0].id" :tips="rate[0].tips" :colorObj="rate[0].colorData" />
@@ -28,13 +28,13 @@
         <div class="water">
           <dv-water-level-pond :config="water" style="height: 1.5rem" />
         </div>
-      </div>
+      </div> -->
     </div>
   </div>
 </template>
 
 <script>
-import CenterChart from "@/components/first/center/centerChartRate";
+// import CenterChart from "@/components/first/center/centerChartRate";
 
 export default {
   data () {
@@ -92,48 +92,48 @@ export default {
       ranking: {
         data: [
           {
-            name: "周口",
-            value: 55
-          },
-          {
-            name: "南阳",
+            name: "上呼吸道感染",
             value: 120
           },
           {
-            name: "西峡",
-            value: 78
+            name: "高血压",
+            value: 110
           },
           {
-            name: "驻马店",
-            value: 66
+            name: "糖尿病",
+            value: 100
           },
           {
-            name: "新乡",
+            name: "妊娠反应",
+            value: 90
+          },
+          {
+            name: "支气管炎",
             value: 80
           },
           {
-            name: "新乡2",
-            value: 80
+            name: "膀胱不正",
+            value: 70
           },
           {
-            name: "新乡3",
-            value: 80
+            name: "胃炎",
+            value: 60
           },
           {
-            name: "新乡4",
-            value: 80
+            name: "急性肠炎",
+            value: 50
           },
           {
-            name: "新乡5",
-            value: 80
+            name: "慢性胃炎",
+            value: 40
           },
           {
-            name: "新乡6",
-            value: 80
+            name: "肺炎",
+            value: 30
           },
         ],
         carousel: "single",
-        unit: "人"
+        // unit: "人"
       },
       water: {
         data: [24, 45],
@@ -175,7 +175,7 @@ export default {
     };
   },
   components: {
-    CenterChart
+    // CenterChart
     // centerChart1,
     // centerChart2
   }
@@ -211,7 +211,7 @@ export default {
     }
     .ranking {
       padding: 0.125rem;
-      width: 59%;
+      width: 100%;
     }
     .percent {
       width: 40%;

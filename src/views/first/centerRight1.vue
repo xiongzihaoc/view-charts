@@ -6,7 +6,7 @@
           <icon name="chart-line"></icon>
         </span>
         <div class="d-flex">
-          <span class="fs-xl text mx-2">任务完成排行榜</span>
+          <span class="fs-xl text mx-2">慢病下降率<span style="color:#F56C6C;font-weight:700;"> TOP10</span></span>
         </div>
       </div>
       <div class="d-flex jc-center body-box">
@@ -55,7 +55,8 @@ export default {
 #centreRight1 {
   padding: 0.2rem;
   height: 5.125rem;
-  min-width: 3.75rem;
+  // min-width: 3.75rem;
+  width: 100%;
   border-radius: 0.0625rem;
   .bg-color-black {
     height: 4.8125rem;

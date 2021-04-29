@@ -14,7 +14,7 @@
         <CentreLeft1Chart />
       </div>
       <!-- 4个主要的数据 -->
-      <div class="bottom-data">
+      <!-- <div class="bottom-data">
         <div class="item-box" v-for="(item,index) in numberData" :key="index">
           <div class="d-flex">
             <span class="coin">￥</span>
@@ -25,7 +25,7 @@
             <span class="colorYellow">(件)</span>
           </p>
         </div>
-      </div>
+      </div> -->
     </div>
   </div>
 </template>

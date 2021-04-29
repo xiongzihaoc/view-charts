@@ -123,7 +123,7 @@ export default {
             itemGap: 15,
             itemWidth: 12,
             itemHeight: 12,
-            data: ["平均指标", "我的指标"],
+            data: ["浙江中医院", "萧山医院"],
             textStyle: {
               color: "#fff",
               fontSize: 14
@@ -198,7 +198,7 @@ export default {
           },
           // 下方Y轴
           yAxis: {
-            name: "工单",
+            // name: "工单",
             nameLocation: "end",
             nameGap: 24,
             nameTextStyle: {
@@ -233,7 +233,7 @@ export default {
               data: [
                 {
                   value: newData.radarDataAvg[6],
-                  name: "平均指标",
+                  name: "浙江中医院",
                   itemStyle: {
                     normal: {
                       color: "#f8d351"
@@ -257,7 +257,7 @@ export default {
                 },
                 {
                   value: newData.radarData[6],
-                  name: "我的指标",
+                  name: "萧山医院",
                   itemStyle: {
                     normal: {
                       color: "#43dfa2"
