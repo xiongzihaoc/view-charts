@@ -21,7 +21,7 @@
           <div
             v-for="item in this.illNameList"
             :key="item.id"
-            style="color: #fff; margin: 0.2rem"
+            style="color: #fff; margin: 0.25rem 0"
           >
             {{ item.name }}
           </div>
@@ -31,7 +31,7 @@
           <div
             v-for="item in this.totalList"
             :key="item.id"
-            style="color: #fff; margin: 0.2rem"
+            style="color: #fff; margin: 0.25rem 0"
           >
             {{ item.name }}
           </div>
@@ -41,7 +41,7 @@
           <div
             v-for="item in this.totalList"
             :key="item.id"
-            style="color: #fff; margin: 0.2rem"
+            style="color: #fff; margin: 0.25rem 0"
           >
             {{ item.name }}
           </div>
@@ -51,7 +51,7 @@
           <div
             v-for="item in this.totalList"
             :key="item.id"
-            style="color: #fff; margin: 0.2rem"
+            style="color: #fff; margin: 0.25rem 0"
           >
             {{ item.name }}
           </div>

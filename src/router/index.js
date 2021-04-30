@@ -9,7 +9,7 @@ const routes = [{
   component: () => import('../views/first/first.vue')
 }]
 const router = new VueRouter({
-  mode: "history",
+  // mode: "history",
   routes
 })
 

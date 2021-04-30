@@ -231,7 +231,6 @@ export default {
     this.cancelLoading();
   },
   methods: {
-
     // timeFn() {
     //   setInterval(() => {
     //     this.dateDay = formatTime(new Date(), "HH: mm: ss");
